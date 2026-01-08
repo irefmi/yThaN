@@ -57,7 +57,7 @@ body.bg::before {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #090909;
     margin: 5px 0;
 }
 
