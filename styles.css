@@ -129,6 +129,7 @@ body.bg::before {
     display: flex;
     gap: 1rem;
     border: #000000;
+    text-decoration: none;
 }
 
 
@@ -187,19 +188,52 @@ body.bg::before {
 }
 
 .grid-item {
+    display: block;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    text-align: center;
     background: #ffffff;
-    padding: 4rem;
-    border: 1px solid #aa2121;
-    border-radius: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+/* .grid-item:hover, 
+.grid-item:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+*/
+
+.content-grid:hover .grid-item {
+    opacity: 0.6;
+    filter: blur(2px);
+    transform: scale(0.98);
+}
+
+.content-grid .grid-item:hover{
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.content-grid .grid-item:focus{
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.05);
+    z-index: 2;
+    outline: none;
 }
 
 .grid-item h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 0.75rem;
 }
 
 .grid-item p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.5;
     color: #444;
 }
@@ -298,6 +332,16 @@ body.bg::before {
 
     .content-grid {
         grid-template-columns: 1fr;
+    }
+
+    .content-grid:hover .grid-item {
+        filter: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .grid-item:hover {
+        transform: none;
     }
 
     .footer-nav {
