@@ -128,6 +128,7 @@ body.bg::before {
 .hero-actions{
     display: flex;
     gap: 1rem;
+    border: #000000;
 }
 
 
@@ -203,7 +204,42 @@ body.bg::before {
     color: #444;
 }
 
+.site-footer {
+    background: #f8f8f8;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
 
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav span {
+    color: #999;
+}
+
+.footer-note {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #666;
+}
 
 @media (max-width: 900px) {
     .header-container {
@@ -262,6 +298,15 @@ body.bg::before {
 
     .content-grid {
         grid-template-columns: 1fr;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer-nav span {
+        display: none;
     }
 
 }
